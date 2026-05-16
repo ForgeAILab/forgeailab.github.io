@@ -32,9 +32,7 @@ export default function Nav() {
           <a href="#lifecycle" className="transition hover:text-white">Lifecycle</a>
           <a href="#quickstart" className="transition hover:text-white">Quickstart</a>
           <a
-            href="https://github.com/mai1015/forge/tree/main/docs"
-            target="_blank"
-            rel="noreferrer"
+            href="https://docs.forge.dev"
             className="transition hover:text-white"
           >
             Docs

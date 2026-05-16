@@ -55,14 +55,14 @@ export default function Footer() {
             <FooterLink href="#features">Features</FooterLink>
             <FooterLink href="#lifecycle">Lifecycle</FooterLink>
             <FooterLink href="#quickstart">Quickstart</FooterLink>
-            <FooterLink href="https://github.com/mai1015/forge/blob/main/docs/release_plan.md">Roadmap</FooterLink>
+            <FooterLink href="https://docs.forge.dev/release-plan/">Roadmap</FooterLink>
           </FooterCol>
 
           <FooterCol title="Docs">
-            <FooterLink href="https://github.com/mai1015/forge/blob/main/docs/getting-started.md">Getting started</FooterLink>
-            <FooterLink href="https://github.com/mai1015/forge/blob/main/docs/architecture.md">Architecture</FooterLink>
-            <FooterLink href="https://github.com/mai1015/forge/blob/main/docs/api.md">API reference</FooterLink>
-            <FooterLink href="https://github.com/mai1015/forge/blob/main/docs/cli.md">forge-ctl CLI</FooterLink>
+            <FooterLink href="https://docs.forge.dev/getting-started/">Getting started</FooterLink>
+            <FooterLink href="https://docs.forge.dev/architecture/">Architecture</FooterLink>
+            <FooterLink href="https://docs.forge.dev/api/">API reference</FooterLink>
+            <FooterLink href="https://docs.forge.dev/cli/">forge-ctl CLI</FooterLink>
           </FooterCol>
 
           <FooterCol title="Community">
