@@ -1,10 +1,13 @@
 import { useState } from 'react'
 
+type CodeLang = 'shell' | 'json' | 'toml'
+
 type Tab = {
   id: string
   label: string
   code: string
   hint?: string
+  lang?: CodeLang
 }
 
 const INSTALL_TABS: Tab[] = [
@@ -39,45 +42,30 @@ cd forge && cargo run -p forge-cli -- --demo`,
 
 const MCP_TABS: Tab[] = [
   {
-    id: 'claude',
-    label: 'Claude Code',
-    hint: '~/.claude.json or project .mcp.json',
+    id: 'cli',
+    label: 'CLI setup',
+    hint: 'Recommended · writes Claude Code, Codex, or Cursor config',
+    code: `# Authenticate once; enter your password when prompted
+forge-ctl login --email you@example.com
+
+# Write MCP config for your client
+forge-ctl mcp install --agent claude
+forge-ctl mcp install --agent codex --project-id <PROJECT_ID>
+forge-ctl mcp install --agent cursor --scope user`,
+  },
+  {
+    id: 'manual',
+    label: 'Manual config',
+    hint: 'Fallback for unsupported MCP clients',
+    lang: 'json',
     code: `{
   "mcpServers": {
     "forge": {
       "type": "http",
-      "url": "http://127.0.0.1:8080/mcp"
+      "url": "http://127.0.0.1:8080/mcp?token=<FORGE_TOKEN>"
     }
   }
 }`,
-  },
-  {
-    id: 'codex',
-    label: 'Codex',
-    hint: '~/.codex/config.toml',
-    code: `[mcp_servers.forge]
-type = "http"
-url  = "http://127.0.0.1:8080/mcp"`,
-  },
-  {
-    id: 'cursor',
-    label: 'Cursor',
-    hint: '~/.cursor/mcp.json',
-    code: `{
-  "mcpServers": {
-    "forge": {
-      "url": "http://127.0.0.1:8080/mcp"
-    }
-  }
-}`,
-  },
-  {
-    id: 'other',
-    label: 'Any MCP client',
-    hint: 'Endpoint',
-    code: `POST http://127.0.0.1:8080/mcp
-Content-Type: application/json
-(JSON-RPC 2.0 — disable with \`forge --no-mcp\`)`,
   },
 ]
 
@@ -108,7 +96,8 @@ export default function Quickstart() {
             Install Forge and connect your agent.
           </h2>
           <p className="mt-4 text-balance text-base leading-relaxed text-zinc-400 sm:text-lg">
-            Forge exposes an <span className="text-flame-200">MCP</span> endpoint so
+            Forge exposes an <span className="text-flame-200">MCP</span> endpoint, and
+            <span className="text-zinc-200"> forge-ctl</span> handles login and client config so
             your agent can create tasks, claim work, review diffs, and merge approved changes.
           </p>
         </div>
@@ -164,7 +153,7 @@ export default function Quickstart() {
                   </span>
                 </div>
               )}
-              <CodeBlock code={mcp.code} lang={mcpTab === 'codex' ? 'toml' : 'json'} />
+              <CodeBlock code={mcp.code} lang={mcp.lang} />
             </div>
 
             <div className="mt-6">
@@ -357,7 +346,7 @@ function ToolCall({ name, args, result }: { name: string; args: string; result: 
 
 /* ---------- code block ---------- */
 
-function CodeBlock({ code, lang = 'shell' }: { code: string; lang?: 'shell' | 'json' | 'toml' }) {
+function CodeBlock({ code, lang = 'shell' }: { code: string; lang?: CodeLang }) {
   const [copied, setCopied] = useState(false)
 
   const copy = async () => {
