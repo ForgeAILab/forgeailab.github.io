@@ -32,7 +32,7 @@ export default function Nav() {
           <a href="#lifecycle" className="transition hover:text-white">Lifecycle</a>
           <a href="#quickstart" className="transition hover:text-white">Quickstart</a>
           <a
-            href="/forge-docs/"
+            href="/docs/"
             className="transition hover:text-white"
           >
             Docs
