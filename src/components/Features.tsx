@@ -31,8 +31,8 @@ const features: Feature[] = [
     icon: <StackIcon />,
   },
   {
-    title: 'Local by default',
-    body: 'SQLite, no accounts, no telemetry, no SaaS. Your code stays on your machine.',
+    title: 'Self-hosted by default',
+    body: 'Run Forge in your own environment. SQLite, no accounts, no telemetry, no SaaS — your code never leaves your infrastructure.',
     icon: <LockIcon />,
   },
 ]
