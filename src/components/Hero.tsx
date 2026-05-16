@@ -57,8 +57,9 @@ export default function Hero() {
           className="mx-auto mt-7 max-w-2xl text-balance text-lg leading-relaxed text-zinc-400 sm:text-xl animate-fade-up"
           style={{ animationDelay: '120ms' }}
         >
-          Run Claude Code, Codex, Gemini, and other agents through a real task lifecycle —
-          isolated git worktrees, CI gates, review, merge. No cloud, no lock-in, MIT licensed.
+          Plug Forge into Claude Code, Codex, or any MCP-aware agent. Drive real tasks
+          through isolated worktrees, CI gates, review, and merge — just by chatting.
+          Local-first, MIT-licensed.
         </p>
 
         <div

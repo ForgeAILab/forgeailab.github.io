@@ -21,6 +21,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 body {
   background:
     radial-gradient(1200px 600px at 50% -200px, rgba(255, 107, 26, 0.18), transparent 60%),
