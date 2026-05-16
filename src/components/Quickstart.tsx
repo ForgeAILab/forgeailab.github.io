@@ -319,7 +319,7 @@ function AgentMsg({ msg }: { msg: Extract<ChatMsg, { kind: 'agent' }> }) {
 
 function ToolCall({ name, args, result }: { name: string; args: string; result: string }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-white/10 bg-black/30">
+    <div className="overflow-hidden rounded-xl border border-white/10 bg-ink-2/60">
       <div className="flex items-center justify-between border-b border-white/5 bg-flame-500/5 px-3 py-1.5">
         <div className="flex items-center gap-2 font-mono text-[11px]">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-flame-400">
@@ -328,7 +328,7 @@ function ToolCall({ name, args, result }: { name: string; args: string; result: 
           <span className="text-zinc-500">tool</span>
           <span className="text-flame-300">{name}</span>
         </div>
-        <span className="rounded border border-emerald-500/20 bg-emerald-500/5 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-emerald-300">
+        <span className="rounded border border-flame-500/30 bg-flame-500/10 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-flame-300">
           ok
         </span>
       </div>
@@ -374,7 +374,7 @@ function CodeBlock({ code, lang = 'shell' }: { code: string; lang?: CodeLang }) 
       >
         {copied ? (
           <>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-flame-400">
               <path d="m5 12 5 5L20 7" />
             </svg>
             Copied
@@ -422,12 +422,12 @@ function highlightLine(line: string, lang: 'shell' | 'json' | 'toml'): React.Rea
     const strSplit = remaining.split(/('[^']*'|"[^"]*")/g)
     strSplit.forEach((s, j) => {
       if (s.startsWith("'") || s.startsWith('"')) {
-        tokens.push(<span key={`s${j}`} className="text-emerald-300/80">{s}</span>)
+        tokens.push(<span key={`s${j}`} className="text-flame-200/90">{s}</span>)
       } else {
         const flagSplit = s.split(/(\s-{1,2}[\w-]+)/g)
         flagSplit.forEach((p, k) => {
           if (/^\s-{1,2}[\w-]+$/.test(p)) {
-            tokens.push(<span key={`f${j}-${k}`} className="text-sky-300/80">{p}</span>)
+            tokens.push(<span key={`f${j}-${k}`} className="text-zinc-400">{p}</span>)
           } else {
             tokens.push(<span key={`t${j}-${k}`}>{p}</span>)
           }
@@ -453,9 +453,9 @@ function highlightJsonLine(line: string): React.ReactNode {
     if (m.index > last) tokens.push(<span key={`r${idx++}`}>{line.slice(last, m.index)}</span>)
     const tok = m[0]
     if (m[1]) {
-      tokens.push(<span key={`k${idx++}`} className="text-sky-300/90">{tok}</span>)
+      tokens.push(<span key={`k${idx++}`} className="text-flame-300/90">{tok}</span>)
     } else if (m[2]) {
-      tokens.push(<span key={`s${idx++}`} className="text-emerald-300/85">{tok}</span>)
+      tokens.push(<span key={`s${idx++}`} className="text-flame-200/90">{tok}</span>)
     } else if (m[3]) {
       tokens.push(<span key={`n${idx++}`} className="text-flame-300">{tok}</span>)
     } else {
@@ -469,7 +469,7 @@ function highlightJsonLine(line: string): React.ReactNode {
 
 function highlightTomlLine(line: string): React.ReactNode {
   if (/^\s*\[.*\]\s*$/.test(line)) {
-    return <span className="text-sky-300/90">{line}</span>
+    return <span className="text-flame-300/90">{line}</span>
   }
   const eq = line.indexOf('=')
   if (eq > 0) {
@@ -477,7 +477,7 @@ function highlightTomlLine(line: string): React.ReactNode {
       <>
         <span className="text-zinc-200">{line.slice(0, eq)}</span>
         <span className="text-zinc-500">=</span>
-        <span className="text-emerald-300/85">{line.slice(eq + 1)}</span>
+        <span className="text-flame-200/90">{line.slice(eq + 1)}</span>
       </>
     )
   }
@@ -501,7 +501,7 @@ function highlightResult(code: string): React.ReactNode {
       if (line.startsWith('+++') || line.startsWith('---')) cls = 'text-zinc-500'
       else if (line.startsWith('+')) cls = 'text-emerald-300'
       else if (line.startsWith('-')) cls = 'text-rose-300'
-      else if (line.startsWith('@@')) cls = 'text-sky-300'
+      else if (line.startsWith('@@')) cls = 'text-zinc-500'
       return (
         <span key={i} className={cls}>
           {line}
