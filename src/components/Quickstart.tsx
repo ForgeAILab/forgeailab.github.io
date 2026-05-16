@@ -15,7 +15,7 @@ const INSTALL_TABS: Tab[] = [
     id: 'npx',
     label: 'npx',
     code: `# Run instantly through npm (macOS / Linux)
-npx @forgeailab/forge --demo`,
+npx @forgeailab/forge`,
   },
   {
     id: 'brew',
@@ -24,19 +24,19 @@ npx @forgeailab/forge --demo`,
 brew install forgeailab/tap/forge
 
 # Start the server (binds 127.0.0.1:8080)
-forge --demo`,
+forge`,
   },
   {
     id: 'curl',
     label: 'curl',
     code: `curl -fsSL https://raw.githubusercontent.com/ForgeAILab/forge/main/install.sh | bash
-forge --demo`,
+forge`,
   },
   {
     id: 'cargo',
     label: 'From source',
     code: `git clone https://github.com/ForgeAILab/forge.git
-cd forge && cargo run -p forge-cli -- --demo`,
+cd forge && cargo run -p forge-cli`,
   },
   {
     id: 'docker',
