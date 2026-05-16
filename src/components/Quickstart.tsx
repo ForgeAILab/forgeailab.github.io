@@ -12,6 +12,12 @@ type Tab = {
 
 const INSTALL_TABS: Tab[] = [
   {
+    id: 'npx',
+    label: 'npx',
+    code: `# Run instantly through npm (macOS / Linux)
+npx @forgeailab/forge --demo`,
+  },
+  {
     id: 'brew',
     label: 'Homebrew',
     code: `# macOS / Linux
@@ -404,7 +410,7 @@ function highlightLine(line: string, lang: 'shell' | 'json' | 'toml'): React.Rea
     return <span className="text-zinc-500">{line}</span>
   }
   if (lang === 'shell') {
-    const cmdRe = /^(\s*)(curl|brew|forge-ctl|forge|cd|git|cargo|docker|jq|open)\b/
+    const cmdRe = /^(\s*)(curl|brew|npx|forge-ctl|forge|cd|git|cargo|docker|jq|open)\b/
     const m = line.match(cmdRe)
     const tokens: React.ReactNode[] = []
     let remaining = line
