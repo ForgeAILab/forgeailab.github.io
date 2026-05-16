@@ -39,14 +39,14 @@ export default function Lifecycle() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-flame-400">
-            Built around the lifecycle
+            Task pipeline
           </p>
           <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-            Watch tasks move through the pipeline.
+            One workflow from task to merge.
           </h2>
           <p className="mt-4 text-balance text-base leading-relaxed text-zinc-400 sm:text-lg">
-            Forge gives every task a real state machine. Optimistic concurrency, audit
-            log, retry budgets — and the same pipeline drives REST, MCP, and the web UI.
+            Forge tracks each task with a state machine, audit log, retries, and gates.
+            REST, MCP, and the web UI all use the same pipeline.
           </p>
         </div>
 
@@ -103,15 +103,15 @@ export default function Lifecycle() {
           <div className="mt-10 grid grid-cols-1 gap-3 border-t border-white/5 pt-6 text-xs text-zinc-400 sm:grid-cols-3">
             <Footnote
               tag="WORKTREE"
-              text="A fresh git worktree is created when a task is claimed and cleaned up at done."
+              text="A task gets its own git worktree when claimed, then cleans up when done."
             />
             <Footnote
               tag="GATE"
-              text="ci_steps run as bash -lc inside the worktree; failures block review → merging."
+              text="Required CI steps run inside the worktree. Failures stop review from moving to merge."
             />
             <Footnote
               tag="EVENTS"
-              text="Each transition publishes on the bus — /api/v1/events streams them as SSE."
+              text="Every transition streams as an event over /api/v1/events."
             />
           </div>
         </div>

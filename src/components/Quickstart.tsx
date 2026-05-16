@@ -20,13 +20,13 @@ forge --demo`,
   {
     id: 'curl',
     label: 'curl',
-    code: `curl -fsSL https://raw.githubusercontent.com/mai1015/forge/main/install.sh | bash
+    code: `curl -fsSL https://raw.githubusercontent.com/ForgeAILab/forge/main/install.sh | bash
 forge --demo`,
   },
   {
     id: 'cargo',
     label: 'From source',
-    code: `git clone https://github.com/mai1015/forge.git
+    code: `git clone https://github.com/ForgeAILab/forge.git
 cd forge && cargo run -p forge-cli -- --demo`,
   },
   {
@@ -102,14 +102,14 @@ export default function Quickstart() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-flame-400">
-            5-minute quickstart
+            Quickstart
           </p>
           <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-            Install, plug it in, ship work by talking.
+            Install Forge and connect your agent.
           </h2>
           <p className="mt-4 text-balance text-base leading-relaxed text-zinc-400 sm:text-lg">
-            Forge speaks <span className="text-flame-200">MCP</span>. Wire it into your
-            agent of choice and your existing chat workflow becomes a task pipeline.
+            Forge exposes an <span className="text-flame-200">MCP</span> endpoint so
+            your agent can create tasks, claim work, review diffs, and merge approved changes.
           </p>
         </div>
 
@@ -140,7 +140,7 @@ export default function Quickstart() {
         <div className="mt-12 grid gap-6 lg:grid-cols-5">
           {/* Step 02 — MCP config */}
           <div className="lg:col-span-2">
-            <SectionHeader step="02" title="Add Forge to your agent" />
+            <SectionHeader step="02" title="Connect your agent" />
             <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-ink-2/80 shadow-xl">
               <div className="flex flex-wrap items-center gap-1 border-b border-white/5 bg-ink-3/60 px-2 py-1.5">
                 {MCP_TABS.map((t) => (
@@ -169,7 +169,7 @@ export default function Quickstart() {
 
             <div className="mt-6">
               <p className="text-xs font-mono uppercase tracking-[0.18em] text-zinc-500">
-                Tools your agent will see
+                Available MCP tools
               </p>
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {MCP_TOOLS.map((t) => (
@@ -186,14 +186,14 @@ export default function Quickstart() {
 
           {/* Step 03 — Chat demo */}
           <div className="lg:col-span-3">
-            <SectionHeader step="03" title="Talk to your agent" />
+            <SectionHeader step="03" title="Run a task from chat" />
             <ChatDemo />
             <p className="mt-5 text-sm text-zinc-500">
-              Watch progress in the web UI at{' '}
+              Track progress in the web UI at{' '}
               <code className="rounded bg-white/5 px-1.5 py-0.5 font-mono text-[12.5px] text-flame-200">
                 http://localhost:8080
               </code>{' '}
-              — every state change streams over SSE.
+              — every state change streams live.
             </p>
           </div>
         </div>
@@ -227,12 +227,12 @@ const CHAT: ChatMsg[] = [
   {
     kind: 'user',
     text:
-      'Create a task to fix the session-expiry bug in /api/v1/auth and have codex pick it up.',
+      'Create a task to fix session expiry in /api/v1/auth and assign it to codex.',
   },
   {
     kind: 'agent',
     text:
-      'On it. Filing the task with a CI gate on `cargo test -p auth`, then claiming it for the codex agent.',
+      'Done. I created the task, added a CI gate, and assigned it to codex.',
     tool: {
       name: 'forge_create_task',
       args: `{
@@ -246,7 +246,7 @@ const CHAT: ChatMsg[] = [
   },
   {
     kind: 'agent',
-    text: 'Task T-204 is in_progress under codex. I\'ll watch the review gate.',
+    text: 'Task T-204 is in progress. I\'ll watch the review gate.',
     tool: {
       name: 'forge_assign_agent',
       args: `{ "task_id": "T-204", "agent_id": "codex-prod" }`,
@@ -255,12 +255,12 @@ const CHAT: ChatMsg[] = [
   },
   {
     kind: 'user',
-    text: 'Show me the diff once review passes.',
+    text: 'Show me the diff when review passes.',
   },
   {
     kind: 'agent',
     text:
-      'Review passed (3/3 CI steps green). Here is the patch — 4 files, +38/-12. Ready to merge?',
+      'Review passed. The patch changes 4 files (+38/-12). Ready to merge?',
     tool: {
       name: 'forge_get_task_diff',
       args: `{ "task_id": "T-204" }`,
@@ -281,7 +281,7 @@ function ChatDemo() {
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-emerald-400" />
           <span className="font-mono text-[10px] uppercase tracking-wider text-zinc-400">
-            chat · MCP connected to forge
+            chat · Forge connected
           </span>
         </div>
         <span className="font-mono text-[10px] uppercase tracking-wider text-zinc-500">

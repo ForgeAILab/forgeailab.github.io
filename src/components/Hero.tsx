@@ -7,7 +7,7 @@ export default function Hero() {
 
       <div className="mx-auto max-w-5xl px-6 text-center">
         <a
-          href="https://github.com/mai1015/forge/releases"
+          href="https://github.com/ForgeAILab/forge/releases"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300 backdrop-blur transition hover:border-flame-500/30 hover:bg-flame-500/5 hover:text-flame-200 animate-fade-up"
@@ -16,7 +16,7 @@ export default function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-flame-500 opacity-60" />
             <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-flame-500" />
           </span>
-          <span>v0.1 public beta is live</span>
+          <span>Public beta is live</span>
           <span className="text-zinc-500">→</span>
         </a>
 
@@ -24,10 +24,10 @@ export default function Hero() {
           className="mt-7 text-balance text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl animate-fade-up"
           style={{ animationDelay: '60ms' }}
         >
-          The local-first{' '}
+          Run coding agents through{' '}
           <span className="relative inline-block">
             <span className="bg-gradient-to-br from-flame-300 via-flame-500 to-flame-700 bg-clip-text text-transparent">
-              workflow engine
+              a real workflow.
             </span>
             <svg
               className="absolute -bottom-1 left-0 w-full"
@@ -51,17 +51,14 @@ export default function Hero() {
               </defs>
             </svg>
           </span>
-          <br />
-          for coding agents.
         </h1>
 
         <p
           className="mx-auto mt-7 max-w-2xl text-balance text-lg leading-relaxed text-zinc-400 sm:text-xl animate-fade-up"
           style={{ animationDelay: '120ms' }}
         >
-          Plug Forge into Claude Code, Codex, or any MCP-aware agent. Drive real tasks
-          through isolated worktrees, CI gates, review, and merge — just by chatting.
-          Local-first, MIT-licensed.
+          Forge connects Claude Code, Codex, and other MCP agents to tasks, worktrees,
+          CI checks, review, and merge. It runs locally and stays MIT-licensed.
         </p>
 
         <div
@@ -72,13 +69,13 @@ export default function Hero() {
             href="#quickstart"
             className="group inline-flex items-center gap-2 rounded-full bg-flame-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_40px_-12px_rgba(255,107,26,0.7)] transition hover:bg-flame-400"
           >
-            Install in 5 minutes
+            Start in 5 minutes
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" className="transition group-hover:translate-x-0.5">
               <path d="M5 12h14M13 5l7 7-7 7" />
             </svg>
           </a>
           <a
-            href="https://github.com/mai1015/forge"
+            href="https://github.com/ForgeAILab/forge"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-zinc-200 backdrop-blur transition hover:border-white/20 hover:bg-white/5"
@@ -105,7 +102,7 @@ export default function Hero() {
       >
         <DemoVideo />
         <p className="mt-4 text-center font-mono text-xs text-zinc-500">
-          30s walkthrough — task lifecycle · isolated worktrees · review gate · merge
+          30-second walkthrough: task · worktree · CI gate · review · merge
         </p>
       </div>
     </section>

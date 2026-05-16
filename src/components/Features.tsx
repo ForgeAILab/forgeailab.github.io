@@ -6,33 +6,33 @@ type Feature = {
 
 const features: Feature[] = [
   {
-    title: 'Structured task lifecycle',
-    body: 'Every task flows todo → in_progress → review → merging → done, with an audit log, cancellation paths, and optimistic concurrency.',
+    title: 'Clear task lifecycle',
+    body: 'Move each task from Todo to Done with audit logs, retries, and clean cancellation.',
     icon: <FlowIcon />,
   },
   {
-    title: 'Isolated git worktrees',
-    body: 'Each task gets its own checkout with file-locking and path guards. Agents can\'t step on each other — and you can throw work away cleanly.',
+    title: 'One worktree per task',
+    body: 'Agents work in separate checkouts with path guards, so parallel tasks stay clean and easy to discard.',
     icon: <TreeIcon />,
   },
   {
-    title: 'CI review gates',
-    body: 'Declare ci_steps per task; the review runner blocks merge until they pass. Combine with auditor-style execution checks for human-in-the-loop.',
+    title: 'CI before merge',
+    body: 'Run required checks in the task worktree. Failed checks stop the merge until the task is fixed.',
     icon: <ShieldIcon />,
   },
   {
-    title: 'BYO agent',
-    body: 'First-class adapters for Claude Code, Codex, Gemini, opencode, and a generic shell executor. Add your own with a tiny trait impl.',
+    title: 'Use any agent',
+    body: 'Connect Claude Code, Codex, Gemini, opencode, or a shell executor. Add more with a small adapter.',
     icon: <PlugIcon />,
   },
   {
-    title: 'Four surfaces, one binary',
-    body: 'REST API, MCP JSON-RPC, forge-ctl CLI, and a React web UI — all served from a single Rust binary bound to 127.0.0.1:8080.',
+    title: 'API, CLI, MCP, and UI',
+    body: 'Use REST, MCP JSON-RPC, forge-ctl, or the React UI from one local Rust binary.',
     icon: <StackIcon />,
   },
   {
-    title: 'Local-first, MIT-licensed',
-    body: 'SQLite + WAL, no accounts, no telemetry, no SaaS. Your code never leaves your machine. Fork it, ship it, sell it.',
+    title: 'Local by default',
+    body: 'SQLite, no accounts, no telemetry, no SaaS. Your code stays on your machine.',
     icon: <LockIcon />,
   },
 ]
@@ -46,8 +46,8 @@ export default function Features() {
             Why Forge
           </p>
           <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-            Most agents can edit files.{' '}
-            <span className="text-zinc-400">Forge operates them safely.</span>
+            Agents edit files.{' '}
+            <span className="text-zinc-400">Forge manages the workflow.</span>
           </h2>
         </div>
 

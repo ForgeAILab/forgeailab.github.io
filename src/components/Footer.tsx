@@ -13,11 +13,11 @@ export default function Footer() {
         />
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 py-20 text-center">
           <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-            Stop babysitting your agents.
+            Give every agent a workflow.
           </h2>
           <p className="max-w-xl text-balance text-base text-zinc-400 sm:text-lg">
-            Forge is MIT-licensed, runs on your machine, and ships in a single binary.
-            Try the 5-minute quickstart and drive a real task to merge.
+            Forge runs locally, ships as one binary, and is MIT-licensed. Start in
+            five minutes and take one task from chat to merge.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
@@ -27,7 +27,7 @@ export default function Footer() {
               Install Forge
             </a>
             <a
-              href="https://github.com/mai1015/forge"
+              href="https://github.com/ForgeAILab/forge"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-zinc-200 backdrop-blur transition hover:border-white/20 hover:bg-white/5"
@@ -47,7 +47,7 @@ export default function Footer() {
               <span className="text-base font-medium tracking-tight">forge</span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-zinc-500">
-              The local-first workflow engine for coding agents. MIT-licensed, no telemetry, no SaaS.
+              Local-first workflow for coding agents. No accounts, no telemetry, no SaaS.
             </p>
           </div>
 
@@ -55,21 +55,21 @@ export default function Footer() {
             <FooterLink href="#features">Features</FooterLink>
             <FooterLink href="#lifecycle">Lifecycle</FooterLink>
             <FooterLink href="#quickstart">Quickstart</FooterLink>
-            <FooterLink href="https://docs.forge.dev/release-plan/">Roadmap</FooterLink>
+            <FooterLink href="/forge-docs/release-plan/">Roadmap</FooterLink>
           </FooterCol>
 
           <FooterCol title="Docs">
-            <FooterLink href="https://docs.forge.dev/getting-started/">Getting started</FooterLink>
-            <FooterLink href="https://docs.forge.dev/architecture/">Architecture</FooterLink>
-            <FooterLink href="https://docs.forge.dev/api/">API reference</FooterLink>
-            <FooterLink href="https://docs.forge.dev/cli/">forge-ctl CLI</FooterLink>
+            <FooterLink href="/forge-docs/getting-started/">Getting started</FooterLink>
+            <FooterLink href="/forge-docs/architecture/">Architecture</FooterLink>
+            <FooterLink href="/forge-docs/api/">API reference</FooterLink>
+            <FooterLink href="/forge-docs/cli/">forge-ctl CLI</FooterLink>
           </FooterCol>
 
           <FooterCol title="Community">
-            <FooterLink href="https://github.com/mai1015/forge">GitHub</FooterLink>
-            <FooterLink href="https://github.com/mai1015/forge/issues">Issues</FooterLink>
-            <FooterLink href="https://github.com/mai1015/forge/blob/main/CONTRIBUTING.md">Contributing</FooterLink>
-            <FooterLink href="https://github.com/mai1015/forge/blob/main/LICENSE">License (MIT)</FooterLink>
+            <FooterLink href="https://github.com/ForgeAILab/forge">GitHub</FooterLink>
+            <FooterLink href="https://github.com/ForgeAILab/forge/issues">Issues</FooterLink>
+            <FooterLink href="https://github.com/ForgeAILab/forge/blob/main/CONTRIBUTING.md">Contributing</FooterLink>
+            <FooterLink href="https://github.com/ForgeAILab/forge/blob/main/LICENSE">License (MIT)</FooterLink>
           </FooterCol>
         </div>
 

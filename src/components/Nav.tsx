@@ -32,7 +32,7 @@ export default function Nav() {
           <a href="#lifecycle" className="transition hover:text-white">Lifecycle</a>
           <a href="#quickstart" className="transition hover:text-white">Quickstart</a>
           <a
-            href="https://docs.forge.dev"
+            href="/forge-docs/"
             className="transition hover:text-white"
           >
             Docs
@@ -41,7 +41,7 @@ export default function Nav() {
 
         <div className="flex items-center gap-2">
           <a
-            href="https://github.com/mai1015/forge"
+            href="https://github.com/ForgeAILab/forge"
             target="_blank"
             rel="noreferrer"
             className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-zinc-200 transition hover:border-white/20 hover:bg-white/10 sm:flex"

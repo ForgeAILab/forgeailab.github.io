@@ -1,6 +1,6 @@
 # forge-site
 
-Promotional website for [Forge](https://github.com/mai1015/forge) — the local-first workflow engine for coding agents.
+Promotional website for [Forge](https://github.com/ForgeAILab/forge) — the local-first workflow engine for coding agents.
 
 ## Stack
 
@@ -34,4 +34,4 @@ public/
   favicon.png
 ```
 
-Brand assets are mirrored from the main [forge](https://github.com/mai1015/forge) repo's `assets/` directory.
+Brand assets are mirrored from the main [forge](https://github.com/ForgeAILab/forge) repo's `assets/` directory.
