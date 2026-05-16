@@ -1,3 +1,5 @@
+import DemoVideo from './DemoVideo'
+
 export default function Hero() {
   return (
     <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28">
@@ -101,37 +103,7 @@ export default function Hero() {
         className="mx-auto mt-20 max-w-6xl px-6 animate-fade-up"
         style={{ animationDelay: '300ms' }}
       >
-        <div className="relative">
-          {/* Halo */}
-          <div
-            className="absolute -inset-x-12 -inset-y-12 -z-10 rounded-[40px] opacity-60 blur-3xl"
-            style={{
-              background:
-                'radial-gradient(closest-side, rgba(255,107,26,0.35), transparent 70%)',
-            }}
-            aria-hidden
-          />
-          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-ink-2/80 shadow-[0_30px_120px_-30px_rgba(0,0,0,0.8)] ring-1 ring-white/5 backdrop-blur">
-            {/* Window chrome */}
-            <div className="flex items-center gap-1.5 border-b border-white/5 bg-ink-3/80 px-4 py-2.5">
-              <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
-              <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
-              <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
-              <span className="ml-3 font-mono text-[10px] uppercase tracking-wider text-zinc-500">
-                forge — 127.0.0.1:8080
-              </span>
-            </div>
-            <video
-              src="/demo.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="block w-full"
-              poster="/forge-wordmark.png"
-            />
-          </div>
-        </div>
+        <DemoVideo />
         <p className="mt-4 text-center font-mono text-xs text-zinc-500">
           30s walkthrough — task lifecycle · isolated worktrees · review gate · merge
         </p>
