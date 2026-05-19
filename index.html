@@ -6,18 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0B0F14" />
     <title>Forge | Self-hosted workflow engine for coding agents</title>
-    <meta name="description" content="Route coding agents through tasks, isolated git worktrees, CI checks, review, and merge. Forge is a self-hosted, MIT-licensed workflow engine with API, MCP, CLI, and an optional web UI." />
+    <meta name="description" content="Forge is a self-hosted workflow engine that lets you pick the best coding agent for each task. Tasks run in isolated git worktrees with CI checks and a review and merge step. MIT-licensed, with REST, MCP, CLI, and an optional web UI." />
+    <link rel="canonical" href="https://forgeailab.github.io/forge-site/" />
     <meta property="og:title" content="Forge | Self-hosted workflow engine for coding agents" />
-    <meta property="og:description" content="Create tasks, assign agents, run work in isolated worktrees, review the result, and merge — with more control than raw chat or CLI sessions. Self-hosted and MIT-licensed." />
-    <meta property="og:image" content="/forge-wordmark.png" />
+    <meta property="og:description" content="Pick the best coding agent for each task. Tasks run in isolated git worktrees, pass CI, then move through review and merge. Self-hosted and MIT-licensed." />
+    <meta property="og:url" content="https://forgeailab.github.io/forge-site/" />
+    <meta property="og:site_name" content="Forge" />
+    <meta property="og:image" content="https://forgeailab.github.io/forge-site/forge-wordmark.png" />
     <meta property="og:image:alt" content="Forge — orange F mark with the wordmark on a dark background." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Forge | Self-hosted workflow engine for coding agents" />
-    <meta name="twitter:description" content="Put coding agents on a real workflow: task, worktree, CI, review, merge." />
-    <meta name="twitter:image" content="/forge-wordmark.png" />
+    <meta name="twitter:description" content="Pick the best coding agent for each task. Isolated git worktrees, CI, then a review and merge step. Self-hosted, MIT-licensed." />
+    <meta name="twitter:image" content="https://forgeailab.github.io/forge-site/forge-wordmark.png" />
+    <meta name="twitter:image:alt" content="Forge — orange F mark with the wordmark on a dark background." />
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Forge",
+      "description": "Self-hosted workflow engine for coding agent orchestration. Routes tasks through isolated git worktrees, CI checks, and a review and merge workflow. API-first developer tool with REST, MCP, CLI, and an optional web UI.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "macOS, Linux, Windows",
+      "url": "https://forgeailab.github.io/forge-site/",
+      "license": "https://opensource.org/licenses/MIT",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "codeRepository": "https://github.com/ForgeAILab/forge"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Forge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Forge is a self-hosted workflow engine for coding agents. It handles coding agent orchestration: tasks, isolated git worktrees, CI gates, and a review and merge workflow, all from a single local binary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use different agents for different work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — that's the point. Forge lets you pick which coding agent runs each task, so you can match the agent to the job: one for UI work, another for refactors, a lighter one for routine changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which coding agents does Forge support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Forge ships adapters for Claude Code, Codex, Gemini, opencode, and a generic shell executor. More can be added with a small adapter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do isolated git worktrees work in Forge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each task gets its own git worktree when an agent claims it. Path guards keep parallel work clean, and the worktree is cleaned up automatically when the task is done or cancelled."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Forge an API-first developer tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Forge is API-first: a REST API, MCP JSON-RPC, the forge-ctl CLI, and the web UI all drive the same task pipeline, so you can script the full review and merge workflow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Forge really self-hosted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Forge runs as one local Rust binary backed by SQLite. There are no accounts, no telemetry, and no SaaS dependency — your code never leaves your infrastructure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What license is Forge under?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Forge is MIT-licensed and developed in the open on GitHub."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-[#0B0F14] text-zinc-100 antialiased">
     <div id="root"></div>

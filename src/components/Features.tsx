@@ -6,9 +6,9 @@ type Feature = {
 
 const features: Feature[] = [
   {
-    title: 'Clear task lifecycle',
-    body: 'Move each task from Todo to Done with audit logs, retries, and clean cancellation.',
-    icon: <FlowIcon />,
+    title: 'Pick the right agent per task',
+    body: 'Assign Claude Code, Codex, Gemini, or opencode to each task based on what they handle best. Add more with a small adapter.',
+    icon: <PlugIcon />,
   },
   {
     title: 'One worktree per task',
@@ -21,13 +21,13 @@ const features: Feature[] = [
     icon: <ShieldIcon />,
   },
   {
-    title: 'Use any agent',
-    body: 'Connect Claude Code, Codex, Gemini, opencode, or a shell executor. Add more with a small adapter.',
-    icon: <PlugIcon />,
+    title: 'Clear task lifecycle',
+    body: 'Move each task from Todo to Done with audit logs, retries, and clean cancellation.',
+    icon: <FlowIcon />,
   },
   {
-    title: 'API, CLI, MCP, and UI',
-    body: 'Use REST, MCP JSON-RPC, forge-ctl, or the React UI from one local Rust binary.',
+    title: 'API-first by design',
+    body: 'REST, MCP JSON-RPC, the forge-ctl CLI, and the React UI all drive the same task pipeline from one local Rust binary.',
     icon: <StackIcon />,
   },
   {
@@ -46,8 +46,8 @@ export default function Features() {
             Why Forge
           </p>
           <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-            Agents edit files.{' '}
-            <span className="text-zinc-400">Forge manages the workflow.</span>
+            Different agents, different strengths.{' '}
+            <span className="text-zinc-400">One workflow.</span>
           </h2>
         </div>
 

@@ -24,10 +24,10 @@ export default function Hero() {
           className="mt-7 text-balance text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl animate-fade-up"
           style={{ animationDelay: "60ms" }}
         >
-          Run coding agents through{" "}
+          The right agent for{" "}
           <span className="relative inline-block">
             <span className="bg-gradient-to-br from-flame-300 via-flame-500 to-flame-700 bg-clip-text text-transparent">
-              a real workflow.
+              the right job.
             </span>
             <svg
               className="absolute -bottom-1 left-0 w-full"
@@ -57,9 +57,8 @@ export default function Hero() {
           className="mx-auto mt-7 max-w-2xl text-balance text-lg leading-relaxed text-zinc-400 sm:text-xl animate-fade-up"
           style={{ animationDelay: "120ms" }}
         >
-          Forge connects Claude Code, Codex, and other MCP agents to tasks,
-          worktrees, CI checks, review, and merge. It runs locally and stays
-          MIT-licensed.
+          A self-hosted workflow engine that lets you pick the best coding
+          agent for each task — worktree, CI gate, and review included.
         </p>
 
         <div

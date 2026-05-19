@@ -31,6 +31,7 @@ export default function Nav() {
           <a href="#features" className="transition hover:text-white">Features</a>
           <a href="#lifecycle" className="transition hover:text-white">Lifecycle</a>
           <a href="#quickstart" className="transition hover:text-white">Quickstart</a>
+          <a href="#faq" className="transition hover:text-white">FAQ</a>
           <a
             href="/docs/"
             className="transition hover:text-white"

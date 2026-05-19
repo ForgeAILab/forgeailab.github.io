@@ -55,6 +55,7 @@ export default function Footer() {
             <FooterLink href="#features">Features</FooterLink>
             <FooterLink href="#lifecycle">Lifecycle</FooterLink>
             <FooterLink href="#quickstart">Quickstart</FooterLink>
+            <FooterLink href="#faq">FAQ</FooterLink>
             <FooterLink href="/docs/release-plan/">Roadmap</FooterLink>
           </FooterCol>
 

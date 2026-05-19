@@ -42,11 +42,12 @@ export default function Lifecycle() {
             Task pipeline
           </p>
           <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-            One workflow from task to merge.
+            One pipeline. Any agent you pick.
           </h2>
           <p className="mt-4 text-balance text-base leading-relaxed text-zinc-400 sm:text-lg">
-            Forge tracks each task with a state machine, audit log, retries, and gates.
-            REST, MCP, and the web UI all use the same pipeline.
+            Each task runs through the same stages no matter which agent
+            handles it — isolated worktree, CI gate, review, then merge. REST,
+            MCP, and the web UI all drive the same pipeline.
           </p>
         </div>
 
